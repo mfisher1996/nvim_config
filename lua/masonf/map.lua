@@ -63,12 +63,19 @@ else
 
 end
 
-local code_ok, _ = pcall(require, 'telescope.builtin')
 
-if not code_ok then
-    vim.notify('codium not installed')
+vim.keymap.set('i','<C-s>',function () return vim.fn['codeium#Complete']() end, {expr = true})
+vim.keymap.set('i','<Right>',function () return vim.fn['codeium#Accept']() end, {expr = true})
+vim.keymap.set('i','<Left>',function () return vim.fn['codeium#CycleCompletions'](1) end, {expr = true})
+
+local harp_ok, _ = pcall(require, 'harpoon')
+
+if not harp_ok then
+    vim.notify('Harpoon not installed')
 else
-    vim.keymap.set('i','<C-s>',function () return vim.fn['codeium#Complete']() end, {expr = true})
-    vim.keymap.set('i','<Right>',function () return vim.fn['codeium#Accept']() end, {expr = true})
-    vim.keymap.set('i','<Left>',function () return vim.fn['codeium#CycleCompletions'](1) end, {expr = true})
+    nokeymap('<leader>a',':lua require("harpoon.mark").add_file()<CR>',opts)
+    nokeymap('<leader>h',':lua require("harpoon.ui").toggle_quick_menu()<CR>',opts)
+    nokeymap('<C-k>',':lua require("harpoon.ui").nav_next()<CR>',opts)
+    nokeymap('<C-j>',':lua require("harpoon.ui").nav_prev()<CR>',opts)
+    nokeymap('<leader>t',':lua require("harpoon.tmux").gotoTerminal(1)<CR>',opts)
 end
