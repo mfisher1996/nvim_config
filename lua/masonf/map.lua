@@ -73,7 +73,7 @@ local harp_ok, _ = pcall(require, 'harpoon')
 if not harp_ok then
     vim.notify('Harpoon not installed')
 else
-    nokeymap('<leader>a',':lua require("harpoon.mark").add_file()<CR>',opts)
+    nokeymap('<leader>m',':lua require("harpoon.mark").add_file()<CR>',opts)
     nokeymap('<leader>h',':lua require("harpoon.ui").toggle_quick_menu()<CR>',opts)
     nokeymap('<C-k>',':lua require("harpoon.ui").nav_next()<CR>',opts)
     nokeymap('<C-j>',':lua require("harpoon.ui").nav_prev()<CR>',opts)
