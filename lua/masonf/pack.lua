@@ -44,7 +44,7 @@ packer.startup( function(use)
 	use 'ellisonleao/gruvbox.nvim'
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { 
+		requires = {
 			'nvim-lua/plenary.nvim',
 			'BurntSushi/ripgrep',
 			'nvim-tree/nvim-web-devicons'
@@ -62,6 +62,7 @@ packer.startup( function(use)
     use 'AlexvZyl/nordic.nvim'
 	use 'norcalli/nvim-colorizer.lua'
 	use 'shaunsingh/nord.nvim'
+	use 'ThePrimeagen/harpoon'
 
 	use 'mbbill/undotree'
 	use{ 'VonHeikemen/lsp-zero.nvim', requires = {
