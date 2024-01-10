@@ -11,5 +11,8 @@ return {
             keys[#keys + 1] = { "<leader>vrn", function() vim.lsp.buf.rename() end}
             keys[#keys + 1] = { "<C-h>", function() vim.lsp.buf.signature_help() end}
         end,
+        opts = {
+
+        }
     }
 }
