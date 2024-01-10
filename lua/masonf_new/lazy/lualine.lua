@@ -1,10 +1,10 @@
 return {
 	'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', opt = true } ,
+    dependencies = { 'AlexvZyl/nordic.nvim','nvim-tree/nvim-web-devicons', opt = true } ,
     opts = {
         options = {
             icons_enabled = true,
-            theme = 'auto',
+            theme = 'nordic',
             component_separators = { left = '', right = ''},
             section_separators = { left = '', right = ''},
             disabled_filetypes = {

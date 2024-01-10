@@ -42,14 +42,14 @@ nokeymap('<S-h>',':bprevious<cr>',opts)
 vikeymap('<','<gv',opts)
 vikeymap('>','>gv',opts)
 
-vikeymap('<A-j>',':m .+1<CR>==',opts)
-vikeymap('<A-k>',':m .-2<CR>==',opts)
+vikeymap('<A-j>',":m '>+1<CR>==",opts)
+vikeymap('<A-k>',":m '<-2<CR>==",opts)
 vikeymap('p','"_dP',opts)
 
-vxkeymap('J',':move >+1<CR>gv-gv',opts)
-vxkeymap('K',':move <-2<CR>gv-gv',opts)
-vxkeymap('<A-j>',':move >+1<CR>gv-gv',opts)
-vxkeymap('<A-k>',':move <-2<CR>gv-gv',opts)
+vxkeymap('J',":m '>+1<CR>gv-gv",opts)
+vxkeymap('K',":m '<-2<CR>gv-gv",opts)
+vxkeymap('<A-j>',":m '>+1<CR>gv-gv",opts)
+vxkeymap('<A-k>',":m '<-2<CR>gv-gv",opts)
 
 local status_ok, _ = pcall(require, 'telescope.builtin')
 
@@ -63,10 +63,15 @@ else
 
 end
 
+local codium_ok, _ = pcall(require, 'codeium')
 
-vim.keymap.set('i','<C-s>',function () return vim.fn['codeium#Complete']() end, {expr = true})
-vim.keymap.set('i','<Right>',function () return vim.fn['codeium#Accept']() end, {expr = true})
-vim.keymap.set('i','<Left>',function () return vim.fn['codeium#CycleCompletions'](1) end, {expr = true})
+if not codium_ok then
+    vim.notify('Codeium not installed')
+else
+    vim.keymap.set('i','<C-s>',function () return vim.fn['codeium#Complete']() end, {expr = true})
+    vim.keymap.set('i','<Right>',function () return vim.fn['codeium#Accept']() end, {expr = true})
+    vim.keymap.set('i','<Left>',function () return vim.fn['codeium#CycleCompletions'](1) end, {expr = true})
+end
 
 local harp_ok, _ = pcall(require, 'harpoon')
 

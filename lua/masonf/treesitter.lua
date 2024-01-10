@@ -5,7 +5,15 @@ if not status then
 end
 
 configs.setup {
-    ensure_installed = 'all',
+    ensure_installed = {
+        'lua',
+        'rust',
+        'ocaml',
+        'json',
+        'js',
+        'csharp',
+        'fsharp',
+    },
     sync_install = false,
     ignore_install = {""},
     highlight = {
