@@ -51,17 +51,17 @@ vxkeymap('K',":m '<-2<CR>gv-gv",opts)
 vxkeymap('<A-j>',":m '>+1<CR>gv-gv",opts)
 vxkeymap('<A-k>',":m '<-2<CR>gv-gv",opts)
 
-local status_ok, _ = pcall(require, 'telescope.builtin')
+--local status_ok, _ = pcall(require, 'telescope.builtin')
 
-if not status_ok then
-    vim.notify('Telescope not installed')
-else
-    nokeymap('<leader>ff',':Telescope find_files<cr>',opts)
-    nokeymap('<leader>fs',':Telescope live_grep<cr>',opts)
-    nokeymap('<leader>fh',':Telescope help_tags<cr>',opts)
-    nokeymap('<leader>fg',':Telescope git_files<cr>',opts)
-
-end
+--if not status_ok then
+    --vim.notify('Telescope not installed')
+--else
+    --nokeymap('<leader>ff',':Telescope find_files<cr>',opts)
+    --nokeymap('<leader>fs',':Telescope live_grep<cr>',opts)
+    --nokeymap('<leader>fh',':Telescope help_tags<cr>',opts)
+    --nokeymap('<leader>fg',':Telescope git_files<cr>',opts)
+--
+--end
 
 local codium_ok, _ = pcall(require, 'codeium')
 

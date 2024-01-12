@@ -1,5 +1,4 @@
 local cmp_status_ok, cmp = pcall(require, "cmp") 
-
 if not cmp_status_ok then
     print('no cmp: *****REMOVE ME FROM cmp.lua*****')
   return

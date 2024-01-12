@@ -47,6 +47,6 @@ return {
         vim.api.nvim_create_autocmd("User LspProgressStatusUpdated", {
             group = "lualine_augroup",
             callback = require("lualine").refresh,
-        })  
+        })
     end
 }
