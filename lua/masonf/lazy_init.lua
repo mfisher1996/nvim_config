@@ -12,5 +12,5 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("masonf_new.lazy")
+require("lazy").setup("masonf.lazy")
 

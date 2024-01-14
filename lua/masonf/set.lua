@@ -32,3 +32,6 @@ o.shellxquote = ''
 o.shellquote = ''
 o.shellredir = '2>&1 | Out-File -Encoding UTF8 %s'
 o.shellpipe = '2>&1 | Out-File -Encoding UTF8 %s'
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
