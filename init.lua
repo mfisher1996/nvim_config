@@ -1,7 +1,3 @@
 require("masonf.set")
+require("masonf.lazy_init")
 require("masonf.map")
-require("masonf.pack")
-require("masonf.cmp")
-require("masonf.mason")
-require("masonf.treesitter")
-require("masonf.lualine")
