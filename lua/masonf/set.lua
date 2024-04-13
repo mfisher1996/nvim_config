@@ -26,11 +26,8 @@ o.colorcolumn = '80'
 o.ai = true
 o.cursorline= true
 o.cursorcolumn = true
-o.shellcmdflag = '-NonInteractive -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
 o.shellxquote = ''
 o.shellquote = ''
-o.shellredir = '2>&1 | Out-File -Encoding UTF8 %s'
-o.shellpipe = '2>&1 | Out-File -Encoding UTF8 %s'
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
