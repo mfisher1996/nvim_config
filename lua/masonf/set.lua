@@ -26,7 +26,6 @@ o.colorcolumn = '80'
 o.ai = true
 o.cursorline= true
 o.cursorcolumn = true
-o.shell = 'pwsh.exe'
 o.shellcmdflag = '-NonInteractive -NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
 o.shellxquote = ''
 o.shellquote = ''
