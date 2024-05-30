@@ -21,7 +21,7 @@ nokeymap("<A-j>", "<C-w>j", opts)
 nokeymap("<A-k>", "<C-w>k", opts)
 nokeymap("<A-l>", "<C-w>l", opts)
 
-nokeymap("<leader>e", ":E<CR>", opts)
+nokeymap("<leader>e", ":Explore<CR>", opts)
 
 nokeymap("<leader>y", '"*y', opts)
 vikeymap("<leader>y", '"*y', opts)
